@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Enter a number:<input type="number" id='inputNum'></label>
+<button onclick="show()">Show</button>
+<p id="result"></p>
+    <script>
+        function isPrime(number) {
+            if(number<2){
+                return false;
+            }else {
+                for (let j = 2; j <= Math.sqrt(number); j++) {
+                    if (number % j === 0) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        function show() {
+            let number = +document.getElementById("number2").value;
+            let count = 0;
+            let result = [];
+            for (let N = 2; count <= number2; N++) {
+                if (isPrime(N)) {
+                    result.push(N)
+                    count++;
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

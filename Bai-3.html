@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let birthYear = +prompt('Year of Birth:');
+
+    function yourAge (birthYear) {
+        let today = new Date();
+        let year = today.getFullYear();
+        return year - birthYear;
+    }
+    document.write("your age is: " + yourAge(birthYear));
+</script>
+</body>
+</html>
